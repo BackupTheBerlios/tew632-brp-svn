@@ -1,0 +1,35 @@
+1. Build Environment: 
+	1.1 Fedora core 1, core 3 or core 4, fully install.
+    1.2 If your OS is fedora core 4, make sure you have installed the package "compat-libstdc+-33-3.2.3-47.fc4.i386.rpm".
+        Using command "rpm -qa |grep compat-libstdc+" to check.
+    1.3 you can open Terminal for using command line.
+
+2. Put "TEW-632BRP-A1-GPLSourceCode.tar.gz" under /home and using command "tar -zxvf TEW-632BRP-A1-GPLSourceCode.tar.gz" to untar it.
+
+3. Prepare for toolchain:
+	Copy /home/AthSDK/toolchain/ap71.tar.bz2 to /opt folder and using command "tar -jxvf ap71.tar.bz2" to untar it.
+   
+4. Using cammand "rpm -qa | grep tftp" to check tftp-server rpm does install in build environment,
+   if not, please create /tftpboot directory using command "mkdir /tftpboot".
+   
+5. Prepare for .config:
+	5.1 Build up with Russia wizard GUI support:
+		    Copy /home/AthSDK/WWW/TEW-632BRP/config/TEW-632BRP.russia.prj.config to /home/AthSDK/.config
+		    (using command "cp -f /home/AthSDK/www/TEW-632BRP/config/TEW-632BRP.russia.prj.config /home/AthSDK/.config")
+		    Copy /home/AthSDK/www/TEW-632BRP/Makefile to /home/AthSDK/www/Makefile (overwrite original)
+		    (using command "cp -f /home/AthSDK/www/TEW-632BRP/Makefile /home/AthSDK/www/Makefile")
+    	Build up without Russia wizard GUI support:
+    		Copy /home/AthSDK/WWW/TEW-632BRP/config/TEW-632BRP.prj.config to /home/AthSDK/.config
+    		(using command "cp -f /home/AthSDK/www/TEW-632BRP/config/TEW-632BRP.prj.config /home/AthSDK/.config")
+    
+    5.2 Copy /home/AthSDK/WWW/TEW-632BRP/config/TEW-632BRP.apps.config to /home/AthSDK/apps/.config
+    	(using command "cp -f /home/AthSDK/www/TEW-632BRP/config/TEW-632BRP.apps.config /home/AthSDK/apps/.config")
+    
+6. In /home/AthSDK using command "chmod 777 -R ./" to change file access permission.
+
+7. Then type "make 2>&1 | tee BuildLog.log"
+
+8. After building finished, you can find /home/AthSDK/image folder and firmware("TEW-632BRP_ap81_image.bin").
+    
+    
+        

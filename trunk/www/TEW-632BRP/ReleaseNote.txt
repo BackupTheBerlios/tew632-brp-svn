@@ -1,0 +1,1557 @@
+[Release Note]
+[2008/7/15]
+Name         :Jimmy Huang
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-07-15-0061
+Description  :
+				1.Fixed CONFIG_RUSSIA_WIZARD_PAGES bugs 
+Deatail :
+				1.ReleaseNote.txt	
+				2.www/Makefile
+				
+[2008/7/15]
+Name         :Jimmy Huang
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-07-15-0060
+Description  :
+				1.Add definition CONFIG_RUSSIA_WIZARD_PAGES to seperate UI 
+				  to russia wizard mode and non-russia mode.
+				  If want to build up with russia wizard pages, copy TEW-632BRP.russia.prj.config
+				  to /home/AthSDK/.config
+Deatail :
+				1.ReleaseNote.txt	
+				2.www/Makefile
+				3.add new page wizard3.russia.asp
+				4.add new file TEW-632BRP.russia.prj.config
+
+
+[2008/7/14]
+Name         :Tina Tsao
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-07-14-0059
+AthSDK Tag   :Ath-M-2008-07-11-0336
+Platform Tag :AR7100_2008-07-02-0079
+Wireless Tag :AP81-2008-06-24-0044
+Description  :
+
+				Firmware Version=1.00 ,Build=53 ,Date=Mon, 14 July 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0079, Date=Wed, 02, Jul, 2008 
+				Application=2.0 Build=0336, Date=Thu, 11, Jul, 2008 
+				WLAN Version=ap81-7.1.3.58, Build=0044, Date=Tue, 24, June, 2008 
+				CheckSum = 0x672c396 
+				
+				1.fixed connect type is Russia pppoe, show pppoe string at status page.
+				2.fixed wizard : select manual setting " internet connection " page error.
+Deatail :
+				1.ReleaseNote.txt	
+				2.status.asp
+				3.wizard_russia4.asp
+				4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				
+---------------------------------------------------------------------------------------------------------------------
+[2008/7/11]
+Name         :Tina Tsao
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-07-11-0058
+AthSDK Tag   :Ath-M-2008-07-11-0336
+Platform Tag :AR7100_2008-07-02-0079
+Wireless Tag :AP81-2008-06-24-0044
+Description  :
+
+				Firmware Version=1.00 ,Build=52 ,Date=Fri, 11 July 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0079, Date=Wed, 02, Jul, 2008 
+				Application=2.0 Build=0336, Date=Thu, 11, Jul, 2008 
+				WLAN Version=ap81-7.1.3.58, Build=0044, Date=Tue, 24, June, 2008 
+				CheckSum = 0x672421c 
+				
+				1.fixed error day¡Bhour¡Bmin¡Bsec range
+				2.fixed DHCP list Host name & IP Address not in position
+				3. Fixed Dynamic IP mode Enable DNS Function .
+				4. Fixed wizard function can¡¦t back issue 
+				5. Fixed connect type is Russia pptp, show Russia pptp string at status page
+				6. Fixed show can use's port range
+				7. Fixed check days with month
+				8. Fixed help page error string
+				9. Fixed router IP can¡¦t setting on DHCP range
+				10. Fixed Wan DHCP Device error information at status page
+				11. Fixed PPTP Device information issue
+				12. Fixed Decryption issue for log setting at help page
+				13.Fixed can¡¦t show channel in status page
+				
+
+				
+Deatail :
+				1.ReleaseNote.txt	
+				2.time.asp
+				3.lan.asp
+				4.wan_russia_pptp.asp
+				5.wan_pptp.asp
+				6.time.asp
+				7.help_main.asp
+				8.status.asp
+				9.public.js
+				10.wan_l2tp.asp
+				11.wizard7.asp
+				12.wizard6.asp
+				13.wizard3.asp
+				14.wizard1.asp
+				15.wizard2.asp
+				16.lan.asp
+
+---------------------------------------------------------------------------------------------------------------------
+[2008/7/11]
+Name         :Tina Tsao
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-07-11-0057
+AthSDK Tag   :th-M-2008-07-04-0316
+Platform Tag :AR7100_2008-07-02-0079
+Wireless Tag :AP81-2008-06-24-0044
+Description  :
+
+				Firmware Version=1.00 ,Build=51 ,Date=Wen, 25 Jun 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0075, Date=Thu, 22, May, 2008 
+				Application=2.0 Build=0260, Date=Thur, 29, May, 2008 
+				WLAN Version=ap81-7.1.3.51, Build=0040, Date=Thr, 15, May, 2008 
+				CheckSum = 0x67113e4 
+
+				
+				1.Add new wizard for Russia
+				
+Deatail :
+				1.ReleaseNote.txt	
+				2.wizard_russia1.asp
+				3.wizard_russia2.asp
+				4.wizard_russia3.asp
+				5.wizard_russia4.asp
+				6.wizard2.asp
+				6.wizard3.asp
+				6.wizard5.asp
+
+---------------------------------------------------------------------------------------------------------------------
+
+[2008/6/25]
+Name         :Joe_Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-07-01-0056
+AthSDK Tag   :Ath-M-2008-05-29-0260
+Platform Tag :AR7100_2008-05-22-0075
+Wireless Tag :AP81-2008-05-15-0040
+Description  :
+
+				Firmware Version=1.00 ,Build=51 ,Date=Wen, 25 Jun 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0075, Date=Thu, 22, May, 2008 
+				Application=2.0 Build=0260, Date=Thur, 29, May, 2008 
+				WLAN Version=ap81-7.1.3.51, Build=0040, Date=Thr, 15, May, 2008 
+				CheckSum = 0x67113e4 
+
+				
+				1.1.	fixed DHCP list Host name & IP Address not in position
+				
+Deatail :
+				1.ReleaseNote.txt	
+				2.lan.asp
+
+---------------------------------------------------------------------------------------------------------------------
+[2008/6/25]
+Name         :Joe_Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-06-25-0055
+AthSDK Tag   :Ath-M-2008-05-29-0260
+Platform Tag :AR7100_2008-05-22-0075
+Wireless Tag :AP81-2008-05-15-0040
+Description  :
+
+				Firmware Version=1.00 ,Build=51 ,Date=Wen, 25 Jun 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0075, Date=Thu, 22, May, 2008 
+				Application=2.0 Build=0260, Date=Thur, 29, May, 2008 
+				WLAN Version=ap81-7.1.3.51, Build=0040, Date=Thr, 15, May, 2008 
+				CheckSum = 0x67113e4 
+
+				
+				1.fixed error day¡Bhour¡Bmin¡Bsec range
+				2.fixed time zone GMT zone -04:30
+				3.fixed display wrong on time zone drop down box
+				4.fixed Virtual server:DNS protocol error
+				5.fixed Remote management:IP range should block start IP surpassed end IP
+				6.fixed WPS always pop up "can't used shared key when WPS enable" when WPS disable
+				7.fixed WPS select WEP key 2~3 to used should block it when WPS enable
+				8.fixed Daylight saving :week should have 6th
+				9.fixed subnet mask pop error information
+				
+Deatail :
+				1.ReleaseNote.txt
+				2.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				3.version.c	
+				4.time.asp
+				5.nvram.default
+				6.wlan_wps.asp
+				7.wireless_auth.asp
+				8.remote_management.asp
+				9.public_msg.js
+				10.public.js
+				11.lan.asp
+
+[2008/6/12]
+Name         :Joe_Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-06-12-0054
+AthSDK Tag   :Ath-M-2008-05-29-0260
+Platform Tag :AR7100_2008-05-22-0075
+Wireless Tag :AP81-2008-05-15-0040
+Description  :
+
+				Firmware Version=1.00 ,Build=49 ,Date=Thu, 29 May 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0075, Date=Thu, 22, May, 2008 
+				Application=2.0 Build=0260, Date=Thur, 29, May, 2008 
+				WLAN Version=ap81-7.1.3.51, Build=0040, Date=Thr, 15, May, 2008 
+				CheckSum = 0x67000ab
+				
+				1. Fixed  error string on title at wireless_auth.asp
+				2. Fixed  error string on title at firewall_setting.asp
+				
+Deatail :
+				1.ReleaseNote.txt
+				2.firewall_setting.asp
+				3.wireless_auth.asp
+				4.ReleaseNote.txt
+
+----------------------------------------------------------
+[2008/5/29]
+Name         :Joe_Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-05-29-0053
+AthSDK Tag   :Ath-M-2008-05-29-0260
+Platform Tag :AR7100_2008-05-22-0075
+Wireless Tag :AP81-2008-05-15-0040
+Description  :
+
+				Firmware Version=1.00 ,Build=49 ,Date=Thu, 29 May 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0075, Date=Thu, 22, May, 2008 
+				Application=2.0 Build=0260, Date=Thur, 29, May, 2008 
+				WLAN Version=ap81-7.1.3.51, Build=0040, Date=Thr, 15, May, 2008 
+				CheckSum = 0x67000ab
+				
+				1. Fix the bug when modify dhcp range, pc can get ip but incorrect range
+				2. Fix the bug wrong source IP for PPTP / L2TP / Russia PPTP / Russia PPPoE
+				
+Deatail :
+				1.ReleaseNote.txt
+				2.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				3.version.c	
+----------------------------------------------------------
+[2008/5/27]
+Name         :Grace.Yang
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-05-28-0052
+AthSDK Tag   :Ath-M-2008-05-28-0257
+Platform Tag :AR7100_2008-05-14-0074
+Wireless Tag :AP81-2008-05-15-0040
+Description  :
+				Firmware Version=1.00 ,Build=48 ,Date=Wed, 28 May 2008
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0075, Date=Thu, 22, May, 2008
+				Application=2.0 Build=0257, Date=Wed, 28, May, 2008
+				WLAN Version=ap81-7.1.3.51, Build=0040, Date=Thr, 15, May, 2008  
+				CheckSum = 0x670e881 
+				
+				1. Fixed Routing table interface show error issue.
+				2. Fixed For DNS rule, it should block DNS query when clients on LAN got DNS IP is 192.168.10.1.
+				3. Fixed Different behavior for DHCP client mode and Russia PPTP.
+				4. Fixed Special AP, when disable rule, the UDP port still opening (test it with Battle.net)
+				5. Fixed Port conflict with default settings for virtual server HTTP and Remote Management.
+				   Default setting, the Virtual Server HTTP and Remote Management port conflict (both of them are port 80). 
+				   So we cannot enable any one of them with default settings.
+				   Change default port is 8080.
+				6. Fixed When set protocol type is UDP, the router cannot block it immediately, it must power restart router, the UDP just be blocked.
+				7. Fixed Sometime the PPTP connection (PPTP or Russia PPTP0 is very difficult to connect to PPTP Server.
+				8. Fixed Auto-Reconnect Fail for PPTP and L2TP
+				9. Modify the WAN information can get xml data on status page.
+Deatail :
+				1.status.asp
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				4.version.c	
+----------------------------------------------------------
+[2008/5/20]
+Name         :Grace.Yang
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-05-20-0051
+Description  :
+				1.Add CONFIG_AJAX=y
+				2.Modified status page to get xml data.
+Deatail :
+				1.status.asp
+				2.ReleaseNote.txt
+				3.TEW-632BRP.apps_eagle.config				
+---------------------------------------------------------- 
+Name         :Joe.lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-04-29-0050
+AthSDK Tag   :Ath-M-2008-04-30-0224
+Platform Tag :AR7100_2008-04-28-0070
+Wireless Tag :AP81-2008-04-08-0038
+Description  :Fixed Bugs.
+				 1.add dhcp static option support (33, 249)
+				 		CONFIG_UDHCPC_STATIC_ROUTE=y
+						CONFIG_UDHCPC_CLASSLESS_STATIC_ROUTE=y
+						# CONFIG_RFC_UDHCPC_CLASSLESS_STATIC_ROUTE is not set
+						CONFIG_MS_UDHCPC_CLASSLESS_STATIC_ROUTE=y
+				 2.static_routing Max info lines at 25
+
+				Firmware Version=1.00 ,Build=47 ,Date=Tue, 29 Apr 2008 
+				KERNEL=2.6.15-mips, SDK=2.0, Build=0070, Date=Mon, 28, Apr, 2008 
+				Application=2.0 Build=0224, Date=Wed, 30, Apr, 2008 
+				WLAN Version=ap81-7.1.3.51, Build=0038, Date=Tue, 08, Apr, 2008  
+				CheckSum = 0x66bff2a 
+
+Deatail :
+					1.static_routing.asp
+					2.ReleaseNote.txt
+					3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+					4.www\TEW-632BRP\config\TEW-632BRP.apps_eagle.config		
+		
+---------------------------------------------------------- 
+
+Name         :Chun.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-04-24-0049
+Description  :1. Don't check subnet and ip in routing table
+			  2. In russia mode, show physical information when not dial up.
+			     show virtual info with first DNS from PPP server and second DNS from dhcp server when dail up.
+			  3. modify time_zone error 
+			  4. modify specify_DNS error  
+Deatail 	 :1. static_routing.asp		
+			  2. status.asp
+			  3. time.asp
+			  4. wan_l2tp.asp
+			     wan_pptp.asp
+			     wan_russia_poe.asp
+			     wan_russia_pptp.asp
+>>>>>>> 1.69
+----------------------------------------------------------		
+Name         :Albert.Chen
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-04-08-0048
+AthSDK Tag   :AP61-2008-03-12-0478
+Platform Tag :AR7100_2008-03-05-0063
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+		1.Change Channel width default value to 20Mhz
+
+		Firmware Version=1.00 ,Build=46 ,Date=Tue, 8 Apr 2008
+		KERNEL=2.6.15-mips, SDK=1.0, Build=0063, Date=Mon, 5, Mar, 2008
+		Application Build=0478, Date=Wed, 12, Mar, 2008
+		WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008
+		CheckSum = 0x7ff6e220
+		
+---------------------------------------------------------- 
+Name         :Tina.Tsao
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-04-01-0047
+AthSDK Tag   :Ath-M-2008-04-01-0201
+Platform Tag :AR7100_2008-03-28-0066
+Wireless Tag :AP81-2008-03-31-0036
+Description  :Fixed Bugs.
+		1.Fixed: Routing : dynamic route failed.
+		2.Fixed: WAN- Russia-PPPoE : can't get pppoe DNS when setting fix DNS on "WAN PHYSICAL SETTING".
+							
+		Firmware Version=1.00 ,Build=45 ,Date=Tue, 1 Apr 2008 
+		KERNEL=2.6.15-mips, SDK=2.0, Build=0066, Date=Fri, 28, Mar, 2008 
+		Application=2.0 Build=0201, Date=Tue, 1, Apr, 2008 
+		WLAN Version=ap81-7.1.3.38, Build=0036, Date=Mon, 31, Mar, 2008 
+							CheckSum = 0x66ce461 
+ 
+Deatail :
+		1.version.txt
+		2.ReleaseNote.txt
+		3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+		4.www\TEW-632BRP\config\TEW-632BRP.apps_eagle.config
+		
+----------------------------------------------------------
+Name         :Nick Chou
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-31-0046
+Description  :Fixed Bugs.
+              1.Fixed: Virtual Server : function failed at select ¡§any¡¨ at protocol
+                 => "any" protocal to "both" protocol
+              2. Fixed: Website Filters : can¡¦t filter domain name. 
+                 => because GUI don't save value to nvram 
+Deatail :
+				1.\www\virtual_server.asp
+				2.\www\domain_filter.asp
+				3.ReleaseNote.txt
+----------------------------------------------------------
+
+Name         :Tina.Tsao
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-26-0045
+AthSDK Tag   :Ath-M-2008-03-24-0192
+Platform Tag :AR7100_2008-03-24-0065
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+                                			1.Fixed: When Enable application rules  function, the TCP/UDP/* port (Firewall) sill close, it must restart power of router, the TCP/UDP/* port just be open.
+							
+							Firmware Version=1.00 ,Build=44 ,Date=Mon, 24 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=2.0, Build=0065, Date=Mon, 24, Mar, 2008 
+							Application=2.0 Build=0192, Date=Mon, 24, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x66bed0a 
+ 
+Deatail :
+				1.ReleaseNote.txt
+				2.ReleaseNote.txt
+				3.special_ap.asp
+----------------------------------------------------------
+
+
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-24-0044
+AthSDK Tag   :Ath-M-2008-03-24-0192
+Platform Tag :AR7100_2008-03-24-0065
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.Fixed Nat_Enable not work issue
+							
+							Firmware Version=1.00 ,Build=44 ,Date=Mon, 24 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=2.0, Build=0065, Date=Mon, 24, Mar, 2008 
+							Application=2.0 Build=0192, Date=Mon, 24, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x66bed0a 
+ AthSDK Tag   :AP61-2008-03-12-0478
+Platform Tag :AR7100_2008-03-05-0063
+Wireless Tag :AP81-2008-02-26-0035
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				4.apps\.config
+----------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-19-0043
+AthSDK Tag   :Ath-M-2008-03-19-0188
+Platform Tag :AR7100_2008-03-14-0064
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.	change new apps type
+							2.	add show checksum at chklist
+
+							Firmware Version=1.00 ,Build=43 ,Date=Wed, 11 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=2.0, Build=0064, Date=Fri, 14, Mar, 2008 
+							Application Build=0188, Date=Wed, 19, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x66db561
+ 
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				4.apps\.config
+----------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-13-0042
+AthSDK Tag   :AP61-2008-03-12-0478
+Platform Tag :AR7100_2008-03-05-0063
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.fixed domain code issue when upgrade from build10
+							
+							Firmware Version=1.00 ,Build=42 ,Date=Tue, 11 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0063, Date=Mon, 5, Mar, 2008 
+							Application Build=0478, Date=Wed, 12, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x7ff90220 
+ 
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+----------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-11-0041
+AthSDK Tag   :AP61-2008-03-07-0477
+Platform Tag :AR7100_2008-03-05-0063
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.Fixed upgrade firmware from build10, domain will change issue   
+						
+							Firmware Version=1.00 ,Build=41 ,Date=Tue, 11 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0063, Date=Mon, 5, Mar, 2008 
+							Application Build=0477, Date=Wed, 7, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x7fc23220 
+ 
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+----------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-10-0040
+AthSDK Tag   :AP61-2008-03-07-0477
+Platform Tag :AR7100_2008-03-05-0063
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.Fix domain filter bugs   
+						
+							Firmware Version=1.00 ,Build=40 ,Date=Mon, 10 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0063, Date=Mon, 5, Mar, 2008 
+							Application Build=0477, Date=Wed, 7, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x7fda1220
+ 
+
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+----------------------------------------------------------				
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-07-0039
+AthSDK Tag   :AP61-2008-03-05-0475
+Platform Tag :AR7100_2008-03-05-0063
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.fixed url_filter blocking issue  
+						
+							Firmware Version=1.00 ,Build=0039 ,Date=Fri, 07 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0063, Date=Mon, 5, Mar, 2008 
+							Application Build=0475, Date=Wed, 7, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0x7fcdf220 
+
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+----------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-04-0038
+AthSDK Tag   :AP61-2008-03-05-0474
+Platform Tag :AR7100_2008-03-05-0061
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.add bootup time in status page for test reboot issue 
+							2.fix purenetwork issu
+								
+							Firmware Version=1.00 ,Build=0038 ,Date=Tue, 04 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0061, Date=Mon, 5, Mar, 2008 
+							Application Build=0474, Date=Wed, 5, Mar, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							CheckSum = 0xffe69ccd 
+
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+----------------------------------------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-03-04-0037
+AthSDK Tag   :AP61-2008-02-29-0473
+Platform Tag :AR7100_2008-02-25-0059
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.status page add boot time
+							2.check list add kernel build number and build date
+							3.fixed pure set dns can't show in status page.
+			  			4.fixed pure set dns is null web UI show fail.
+			  			5.fixed secondary dns show loss some addrs in status page. 
+			  			6.fixed backup mode IP 192.168.10.1
+							
+							Firmware Version=1.00 ,Build=0036 ,Date=Tue, 04 Mar 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0059, Date=Mon, 25, Feb, 2008 
+							Application Build=0473, Date=Fri, 29, Feb, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							
+							Firmware Notify=http:// 
+							Firmware Global URL=http://www.trendnet.com 
+							CheckSum = 0xffe4ae9d 
+
+
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				4.defaultConf.h
+
+----------------------------------------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-02-29-0036
+AthSDK Tag   :AP61-2008-02-29-0473
+Platform Tag :AR7100_2008-02-25-0059
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.status page add boot time
+							2.check list add kernel build number and build date
+							3.fixed pure set dns can't show in status page.
+			  			4.fixed pure set dns is null web UI show fail.
+			  			5.fixed secondary dns show loss some addrs in status page. 
+							
+							Firmware Version=1.00 ,Build=0035 ,Date=Fri, 26 Feb 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0059, Date=Mon, 25, Feb, 2008 
+							Application Build=0473, Date=Fri, 29, Feb, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+
+							Firmware Notify=http:// 
+							Firmware Global URL=http://www.trendnet.com 
+							CheckSum = 0xffe5e9df  
+
+
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+
+----------------------------------------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-02-26-0035
+AthSDK Tag   :AP61-2008-02-26-0472
+Platform Tag :AR7100_2008-02-25-0059
+Wireless Tag :AP81-2008-02-26-0035
+Description  :Fixed Bugs.
+							1.update wireless LSDK-7.1.3.38 and fixed Broadcom legacy card data rate drop issue
+							2.check list add kernel build number and build date 
+																					
+							Firmware Version=1.00 ,Build=0034 ,Date=Thu, 26 FEB 2008 
+							KERNEL=2.6.15-mips, SDK=1.0, Build=0058, Date=Fri, 15, Feb, 2008 
+							Application Build=0472, Date=Thu, 26, Feb, 2008 
+							WLAN Version=ap81-7.1.3.38, Build=0035, Date=Tue, 26, Feb, 2008 
+							WLAN MAC=00:03:7f:be:f0:f5 
+							WLAN Domain=/Error Domain 
+							SSID=TRENDnet 
+							WAN MAC=00:01:23:45:67:8a,LAN MAC=00:01:23:45:67:89, default= 0 
+							Firmware Notify=http:// 
+							Firmware Global URL=http://www.trendnet.com 
+							CheckSum = 0xffe72433
+
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+
+----------------------------------------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-02-26-0034
+AthSDK Tag   :Ath-M-2008-02-26-0139
+Platform Tag :AR7100_2008-02-25-0059
+Wireless Tag :AP81-2008-02-19-0034
+Description  :Fixed Bugs.
+							1.change eagle replace AthSDK\apps 
+							2.check list add kernel build number and build date 
+																					
+							Firmware Version=1.00 ,Build=0032 ,Date=Thu, 26 FEB 2008 
+							KERNEL=2.6.15-mips, SDK=2.0, Build=0058, Date=Fri, 15, Feb, 2008 
+							Application Build=0138, Date=Mon, 25, Feb, 2008 
+							WLAN Version=ap81-7.1.3.36, Build=0034, Date=Tue, 19, Feb, 2008 
+							WLAN MAC=00:03:7f:be:f0:f5 
+							WLAN Domain=/Error Domain 
+							SSID=TRENDnet 
+							WAN MAC=00:01:23:45:67:8a,LAN MAC=00:01:23:45:67:89, default= 0 
+							Firmware Notify=http:// 
+							Firmware Global URL=http://www.trendnet.com 
+
+											
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+
+----------------------------------------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-01-24-0033
+AthSDK Tag   :AP61-2008-01-24-0438
+Platform Tag :AR7100_2008-01-18-0053
+Wireless Tag :AP81-2008-01-02-0030
+Description  :Fixed Bugs.
+																					
+							Firmware Version=1.00 ,Build=0031 ,Date=Thu, 24 Jan 2008 
+							KERNEL=2.6.15-mips, SDK=1.0 
+							Application Build=0438, Date=Wed, 24, Jan, 2008 
+							WLAN Version=ap81-7.1.2.47, Build=0030, Date=Wed, 2, Jan, 2008 
+											
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+
+----------------------------------------------------------------------------------------
+Name         :Joe.Lin
+Type         :UI
+Version      :1.0
+Tag          :TEW-632BRP-2008-01-24-0032
+AthSDK Tag   :AP61-2008-01-23-0434
+Platform Tag :AR7100_2008-01-18-0053
+Wireless Tag :AP81-2008-01-02-0030
+Description  :Fixed Bugs.
+																					
+							Firmware Version: 1.00 ,Build: 0031 ,Date: Thu, 24 Jan 2008 
+							KERNEL: 2.6.15-mips, SDK: 1.0 
+							Application Build: 0434, Date: Wed, 23, Jan, 2008 
+							WLAN Version: ap81-7.1.2.47, Build: 0030, Date: Wed, 2, Jan, 2008 
+
+																				
+							1. Fixed Keep Domain / URL lists when "disabled" then "enabled" Domain / URL Blocking function
+							2. Fixed Press "Reset" button, restore start at 5 sec
+							3. Fixed Wireless LED issue
+							4. Verify log to mail issue
+							5. Fixed Wireless adapter Compatibility
+											
+Deatail :
+				1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+				4.domain_filter.asp
+----------------------------------------------------------------------------------------
+[2008/01/22]                        
+Name			:	Chun.Lin        
+Type			: 	UI              
+Version			:	1.0             
+Tag				:	TEW-632BRP-2008-01-22-0031
+Description		:	1.add CONFIG_TIMER=y
+Deatail			:	1.TEW-632BRP.apps_eagle.config
+					  TEW-632BRP.apps.config
+
+----------------------------------------------------------------------------------------
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2008-01-17-0030
+AthSDK Tag      :   AP61-2008-01-18-0418
+Platform Tag    :   AR7100_2008-01-11-0052
+Wireless Tag    :   AP81-2008-01-02-0030
+Description		:	Fixed Bugs.
+																					
+							F/W=1.00 ,Build=0030 ,Date=Fri, 18 Jan 2008, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0418, Date=Fri, 18, Jan, 2008, 
+							WLAN Version=ap81-7.1.2.47, Build=0030, Date=Wed, 2, Jan, 2008,
+																				
+							1.Wireless IOT Test
+							2.Link Test
+							3.Ping Test
+							4.Reset Button Test
+							5.Restore to Default Test
+							6.Security Test
+							7.interop Test with Broadcom(WLI-CB-G300N),Intel(4965AGN),Ralink(DWA-140),Marvell(DWA-130),Atheros(DWA-645 
+							8.restore start at 5 sec 
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc	
+
+----------------------------------------------------------------------------------------
+[2008/01/09]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2008-01-11-0029
+AthSDK Tag      :   AP61-2008-01-11-0413
+Platform Tag    :   AR7100_2008-01-11-0052
+Wireless Tag    :   AP81-2008-01-09-0032
+Description		:	Fixed Bugs.
+														
+
+							
+							F/W=1.00 ,Build=0029 ,Date=Fri, 11 Jan 2008, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0413, Date=Fri, 11, Jan, 2008, 
+							WLAN Version=ap81-7.1.3.26, Build=0032, Date=Wed, 9, Jan, 2008,
+																				
+							1.Wireless LED issue 
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc	
+
+----------------------------------------------------------------------------------------
+[2008/01/09]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2008-01-09-0028
+AthSDK Tag      :   AP61-2008-01-08-0411
+Platform Tag    :   AR7100_2007-01-04-0049
+Wireless Tag    :   AP81-2008-01-09-0032
+Description		:	Fixed Bugs.
+														
+							F/W=1.00 ,Build=0028 ,Date=Wed, 09 Jan 2008,
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0411, Date=Tue, 08, Jan, 2008, 
+							WLAN Version=ap81-7.1.3.26, Build=0032, Date=Wed, 9, Jan, 2008,
+																				
+							1.Virtual Server port open issue
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc	
+
+----------------------------------------------------------------------------------------
+[2007/12/26]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-26-0027
+AthSDK Tag      :   AP61-2007-12-24-0398
+Platform Tag    :   AR7100_2007-12-19-0047
+Wireless Tag    :   AP81-7.1.2.47 build 0028
+Description		:	Fixed Bugs.
+							
+							F/W=1.00 ,Build=0027 ,Date=Wen, 26 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0398, Date=Mon, 24, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.47, Build=0028, Date=Mon, 24, Dec, 2007,
+																				
+							1.WAN Physcial issue for Russia PPTP
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc	
+
+----------------------------------------------------------------------------------------
+[2007/12/25]
+Name			:	Chun.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-25-0026
+Description		:	1.fix loading wrong firmware/configuration file only countdown 10 seconds 								
+Deatail			:	1.count_down.asp					
+----------------------------------------------------------------------------------------
+
+[2007/12/21]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-21-0025
+AthSDK Tag      :   AP61-2007-12-21-0397
+Platform Tag    :   AR7100_2007-12-19-0047
+Wireless Tag    :   AP81-7.1.2.47 build 0027
+Description		:	Fixed Bugs.
+							
+							F/W=1.00 ,Build=0025 ,Date=Fri, 21 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0397, Date=Fri, 21, Dec, 2007,
+							WLAN Version=ap81-7.1.2.47, Build=0027, Date=Thr,12, Dec, 2007,
+
+														
+							
+							1.Fixed:Check Gateway address and WAN_PHY¡BWAN¡BLAN in Subnet at the same
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/12/21]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-21-0024
+AthSDK Tag      :   AP61-2007-12-19-0389
+Platform Tag    :   AR7100_2007-12-19-0047
+Wireless Tag    :   AP81-7.1.2.47 build 0027
+Description		:	Fixed Bugs.
+							
+							F/W=1.00 ,Build=0024 ,Date=Fri, 21 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0389, Date=Wes, 19, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.47, Build=0027, Date=Thr,12, Dec, 2007,
+														
+							
+							1.Fixed:Check Gateway address and WAN_PHY¡BWAN¡BLAN in Subnet at the same
+							2.Fixed:after add address,data format error xxx,xxx,xxx,xxx
+
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/12/20]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-20-0023
+AthSDK Tag      :   AP61-2007-12-19-0389
+Platform Tag    :   AR7100_2007-12-19-0047
+Wireless Tag    :   AP81-7.1.2.47 build 0027
+Description		:	Fixed Bugs.
+							
+							F/W=1.00 ,Build=0023 ,Date=Tus, 20 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0389, Date=Wes, 19, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.47, Build=0027, Date=Thr,12, Dec, 2007,
+							
+							
+							1.Fixed:Check Gateway address and WAN_PHY in Subnet at the same
+							2.Fixed:after add address,data format error xxx,xxx,xxx,xxx
+
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/12/19]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-19-0022
+AthSDK Tag      :   AP61-2007-12-18-0388
+Platform Tag    :   AR7100_2007-12-12-0046
+Wireless Tag    :   AP81-7.1.2.47 build 0027
+Description		:	Fixed Bugs.
+							
+							F/W=1.00 ,Build=0022 ,Date=Wen, 19 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0388, Date=Tue, 18, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.47, Build=0027, Date=Thr,12, Dec, 2007,		
+							
+							1.Fixed:L2TP & PPTP Routing Page only select Lan&Wan
+							2.Fixed:Russia_PPTP & Russia_PPTP Routing Page only select Wan_PHY
+							3.Fixed:Check Gateway address and WAN_PHY in Subnet at the same
+											
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+
+[2007/12/18]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-18-0021
+AthSDK Tag      :   AP61-2007-12-18-0388
+Platform Tag    :   AR7100_2007-12-12-0046
+Wireless Tag    :   AP81-7.1.2.47 build 0027
+Description		:	Fixed Bugs.
+							
+							F/W=1.00 ,Build=0021 ,Date=Tus, 18 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0388, Date=Tue, 18, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.47, Build=0027, Date=Thr,12, Dec, 2007,
+							
+							1.Fixed:Wireless Disable ->WMM  radio item disable
+							2.Fixed:Change Wan Mode ¡Awireless not reboot
+							3.Fixed:L2TP & PPTP Routing Page only select Lan&Wan
+							4.Fixed:Russia_PPTP & Russia_PPTP Routing Page only select Wan_PHY
+							5.Fixed:Check Gateway address and WAN_PHY in Subnet at the same
+							6.Fixed:fixed bugs that PPTP dial in multi-route environment
+		                 => move add_host_gw() from wantimer() to start_pptp()
+
+										
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/12/12]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-12-0020
+AthSDK Tag      :   AP61-2007-12-11-0378
+Platform Tag    :   AR7100_2007-12-03-0044
+Wireless Tag    :   AP81-2007-12-10-0026
+Description		:	Fixed Bugs.
+
+							F/W=1.00 ,Build=0020 ,Date=Wen, 12 Dec 2007, 
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0378, Date=Tue, 11, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.46, Build=0026, Date=Thr,6, Dec, 2007,
+					
+					1.	Fixed: PPTP server exists in the different IP subnet with WAN physical IP,
+							the PPTP connection can not be established
+					2.  Fixed: Passphrase max string length 64 byes in security WPA PSK page
+					3.  Fixed: Confirmed Passphrase  max string length 64 byes in security WPA PSK page
+					4.  Fixed: RADIUS Server 1 & RADIUS Server 2 Shared Secret max string length 64 byes
+					           in Security WPA EAP page
+										
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/12/10]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-12-10-0019
+AthSDK Tag      :   AP61-2007-12-10-0376
+Platform Tag    :   AR7100_2007-12-03-0044
+Wireless Tag    :   AP81-2007-12-10-0026
+Description		:	Fixed Bugs.
+							F/W=1.00 ,Build=0019 ,Date=Mon, 10 Dec 2007,
+							KERNEL = 2.6.15-mips, SDK=1.0, Build=0376, Date=Mon, 10, Dec, 2007, 
+							WLAN Version=ap81-7.1.2.46, Build=0026, Date=Thr,6, Dec, 2007,
+					
+					1.	Fixed: PPTP server exists in the different IP subnet with WAN physical IP,
+							the PPTP connection can not be established
+          2.  wireless compatabilty with BCM wireless card
+										
+Deatail			:	1.version.c
+							2.ReleaseNote.txt
+							3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/11/28]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-11-30-0018
+AthSDK Tag      :   AP61-2007-11-26-0357
+Platform Tag    :   AR7100_2007-11-23-0040
+Wireless Tag    :   AP81-2007-11-23-0023
+Description		:	Fixed Bugs.
+					F/W=1.00 ,Build=0018 ,Date=Fri, 30 Nov 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0357, Date=Mon, 26, Nov, 2007, 
+					WLAN Version=ap81-7.1.2.43, Build=0023, Date=Fri,23, Nov, 2007,
+ 
+
+					
+					1.	Fixed: WAN Russia_PPPTP Static add MPPE Enable Function
+
+										
+Deatail			:	1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/11/27]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-11-29-0017
+AthSDK Tag      :   AP61-2007-11-26-0357
+Platform Tag    :   AR7100_2007-11-23-0040
+Wireless Tag    :   AP81-2007-11-23-0023
+Description		:	Fixed Bugs.
+					F/W=1.00 ,Build=0017 ,Date=Thr, 29 Nov 2007,
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0357, Date=Mon, 26, Nov, 2007, 
+					WLAN Version=ap81-7.1.2.43, Build=0023, Date=Fri,23, Nov, 2007
+ 
+
+					
+					1.	Fixed: WAN PPPTP Static add MPPE Enable Function
+
+										
+Deatail			:	1.version.c
+				2.ReleaseNote.txt
+				3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/11/27]
+Name			:	Joe.Lin
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-11-27-0016
+AthSDK Tag      :   AP61-2007-11-26-0357
+Platform Tag    :   AR7100_2007-11-23-0040
+Wireless Tag    :   AP81-2007-11-23-0023
+Description		:	Fixed Bugs.
+					F/W=1.00 ,Build=0016 ,Date=Tue, 27 Nov 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0357, Date=Mon, 26, Nov, 2007, 
+					WLAN Version=ap81-7.1.2.43, Build=0023, Date=Fri,23, Nov, 2007, 
+
+					
+					1.	Fixed: wireless WPA Key with Pure Network
+					2.	Fixed: DUT management web UI issue with Pure Network
+
+										
+Deatail			:	1.version.c
+					2.ReleaseNote.txt
+					3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/11/21]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-11-21-0015
+AthSDK Tag      :   AP61-2007-11-21-0348
+Platform Tag    :   AR7100_2007-11-20-0037
+Wireless Tag    :   AP81-2007-11-16-0022
+Description		:	Fixed Bugs.
+					F/W=1.00 ,Build=0015 ,Date=Thu, 21 Nov 2007, KERNEL = 2.6.15-mips, 
+					SDK=1.0, Build=0348, Date=Tue, 21, Nov, 2007, WLAN Version=ap81-7.1.2.38, 
+					Build=0022, Date=Fri,16, Nov, 2007,
+					
+					1.Fixed: Pure network issue.
+										
+Deatail			:	1.version.c
+					2.ReleaseNote.txt
+					3.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/11/16]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-11-16-0014
+AthSDK Tag      :   AP61-2007-11-16-0344
+Platform Tag    :   AR7100_2007-11-14-0036
+Wireless Tag    :   AP81-2007-11-08-0021
+Description		:	Fixed Bugs.
+					F/W=1.00 ,Build=0014 ,Date=Fri, 16 Nov 2007, KERNEL = 2.6.15-mips, 
+					SDK=1.0, Build=0344, Date=Fri, 16, Nov, 2007, 
+					WLAN Version=ap81-7.1.2.38, Build=0021, Date=Tur,08, Nov, 2007,		
+					
+					1.Fixed: If we setting "Without SMTP Authentication" in Log setting, then click "Email Log Now", the function can't work. It can't send the log mail.
+					2.Fixed: The WAN Physical interface should be add for Russia PPTP and Russia PPPoE in static route settings.
+					3.Fixed: After disabled the HTTP Service of Virtual Server,and enable remote management, user can access the DUT with port 80.
+					4.Fixed: Protocol/IP Filter issue. When setting the Protocol/IP Filter from default setting list, it shows the warning message, we should delete the blank characters."
+					5.Fixed: When setting wireless security with WPA-EAP and WPA2-EAP, the wireless client can't connect DUT.
+					6.Fixed: Remote management port issue.
+										
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc					
+----------------------------------------------------------------------------------------
+[2007/10/30]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-10-30-0013
+AthSDK Tag      :   AP61-2007-10-29-0333
+Platform Tag    :   AR7100_2007-10-29-0034
+Wireless Tag    :   AP81-7.1.2.32 build 0020
+Description		:	Add new function
+					F/W=1.00 ,Build=0013 ,Date=Tue, 30 Oct 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0333, Date=Mon, 29, Oct, 2007, 
+					WLAN Version=ap81-7.1.2.32, Build=0020, Date=Tur,25, Oct, 2007,			
+					
+					1.Fixed Firewall settings-NAT endpoint Filter.
+										
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+					
+----------------------------------------------------------------------------------------
+[2007/10/11]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-10-17-0012
+AthSDK Tag      :   AP61-2007-10-16-0324
+Platform Tag    :   AR7100_2007-10-16-0031
+Wireless Tag    :   AP81-2007-10-05-0019
+Description		:	Add new function
+					F/W=1.00 ,Build=0012 ,Date=Wed, 17 Oct 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0324, Date=Tue, 16, Oct, 2007, 
+					WLAN Version=ap81-7.1.2.27, Build=0019, Date=Fri,05, Oct, 2007,			
+					
+					1.Fixed Firewall settings-NAT endpoint Filter.
+					2.Removed Inbound Filter.
+					3.Support MPPPE function.
+					4.Support WMM function.
+					5.Fixed 802.11 mode: 802.11g only/802.11n only.		
+					
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+										
+					dmz.asp
+					domain_filter.asp 
+					filters.asp 
+					inbound_filter.asp
+					protocol_filter.asp 
+					special_ap.asp
+					virtual_server.asp
+					wan_pptp.asp 
+					wireless_basic.asp
+					firewall_setting.asp
+----------------------------------------------------------------------------------------
+[2007/10/11]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-10-11-0011
+AthSDK Tag      :   AP61-2007-10-03-0312
+Platform Tag    :   AR7100_2007-09-27-0027
+Wireless Tag    :   AP81-2007-10-05-0019
+Description		:	Add new function
+					F/W=1.00 ,Build=0011 ,Date=Thu, 11 Oct 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0312, Date=Wed, 3, Oct, 2007, 
+					WLAN Version=ap81-7.1.2.27, Build=0019, Date=Fri,05, Oct, 2007,						
+					
+					1.Add Firewall settings-NAT endpoint Filter.
+					2.Add Inbound Filter.
+					3.Add L2TP Pass through.
+					4.Add Russia PPPoE/Russia PPTP function.(Both wan /wizard setting)
+					5.Add 802.11 mode: 802.11g only/802.11n only.		
+					
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+										
+					dmz.asp
+					domain_filter.asp 
+					filters.asp 
+					protocol_filter.asp
+					public.js 
+					public_msg.js 
+					remote_management.asp
+					special_ap.asp 
+					status.asp 
+					virtual_server.asp
+					wan.asp 
+					wan_bigpond.asp 
+					wan_dhcp.asp
+					wan_l2tp.asp 
+					wan_poe.asp
+					wan_pptp.asp
+					wireless_basic.asp 
+					wizard2.asp 
+					wizard5.asp
+					wizard5e.asp 
+					wizard5f.asp 
+					wizard7_setting.asp
+					wizard_redirect.asp
+				add:delet.gif 
+				add:edit.gif 
+				add:inbound_filter.asp 
+				add:wan_russia_poe.asp
+				add:wan_russia_pptp.asp 
+				add:wizard5h.asp 
+				add:wizard5i.asp 
+				add:wizard_close.asp
+----------------------------------------------------------------------------------------
+[2007/09/20]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-09-20-0010
+AthSDK Tag      :   AP61-2007-09-20-0302
+Platform Tag    :   AR7100_2007-09-014-0024 
+Wireless Tag    :   AP81-2007-09-14-0017
+Description		:	Fixed bugs
+					F/W=1.00 ,Build=0010 ,Date=Thu, 20 Sep 2007,
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0302, Date=Thur, 20, Sep, 2007,
+					WLAN Version=ap81-7.1.2.27, Build=0017, Date=Fri, 14, Sep, 2007,
+					
+					1.Fixed WPA-PSK key error of WPS when use pure network.					
+					
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+
+----------------------------------------------------------------------------------------
+
+[2007/09/17]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-09-17-0009
+AthSDK Tag      :   AP61-2007-09-17-0300
+Platform Tag    :   AR7100_2007-09-014-0024 
+Wireless Tag    :   AP81-2007-09-14-0017
+Description		:	Fixed bugs
+					F/W=1.00 ,Build=0009 ,Date=Mon, 17 Sep 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0300, Date=Mon, 17, Sep, 2007, 
+					WLAN Version=ap81-7.1.2.27, Build=0017, Date=Fri, 14, Sep, 2007,
+					1. Remove the hyperlink and description for "Firewall Rule" in "Access" help.
+					2. Remove the description for "Setup Wizard" in "Tools -> Settings" help.
+					3. Removed "SNMP" and "Gaming Mode" functions in "Remote Management", but the description display in help. And add description for "PPTP" and "IPSec".
+					4. Removed "New" button description in "Special AP" help.
+					5. Removed "New" button description in "Virtual Server" help.
+					6. Removed "New" button description in "Port Filter" help. And change the picture for "Port Filter" in help.
+					7. Removed "New" button description in "MAC Table" help.
+					8. Removed "New" button description in "Static Routing" help.
+					9. Removed "Source" and "Destination" description in Log help.
+					10. Exchange the position for WAN and LAN description in "Device information" help.
+					11. Add the hyperlink for "Wi-Fi Protected Setup" in help.
+					12. Removed "Authentication Type" description in "Wireless -> Advanced" help.
+					13. Add the description for "WPA", "WPA2" and "WPA-Auto" in wireless -> Security help.
+					14. Add the description for "802.11 Mode", "Channel Width" and "SSID Broadcast" in wireless -> Basic help.
+					15. Add the description for "L2TP" and "BigPond Cable" in help.
+					16. Fixed WAN DNS setting description in help.
+					17. Fixed default host name is "TEW-632BRP".
+					18. Fixed WPA-PSK key error of WPS when use pure network.					
+					
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+						
+						help_access.asp 
+						help_main.asp 
+						help_manage.asp 
+						help_routing.asp
+						help_status.asp 
+						help_tools.asp 
+						help_wlan.asp
+						global.jpg
+----------------------------------------------------------------------------------------
+[2007/09/07]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-09-13-0008
+AthSDK Tag      :   AP61-2007-09-11-0292
+Platform Tag    :   AR7100_2007-09-07-0023 
+Wireless Tag    :   AP81-2007-09-13-0016
+Description		:	Fixed bugs
+					F/W=1.00 ,Build=0008 ,Date=Thu, 13 Sep 2007, 
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0292, Date=Tue, 11, Sep, 2007, 
+					WLAN Version=ap81-7.1.2.19, Build=0016, Date=Thur, 13, Sep, 2007,
+					1. Fixed 802.11 mode default is 11bgn.
+					2. Fixed firmware version display build number.
+					3. Fixed channel width default isAuto 20/40MHz.
+					4. Fixed default hostname is "TEW-632BRP"
+					5. Fixed specail AP function cannot work normal.
+					6. Fixed DUT will crash after setting wireless security.
+					
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+   	          		  
+   	          		  special_ap.asp
+   	          		  status.asp
+   	          		  wireless_basic.asp
+
+   	          		  
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-09-07-0006
+AthSDK Tag      :   AP61-2007-09-07-0290
+Platform Tag    :   AR7100_2007-09-07-0023 
+Wireless Tag    :   AP81-2007-08-29-0013
+Description		:	Fixed bugs
+					F/W=1.00 ,Build=0006 ,Date=Fri, 7 Sep 2007,
+					KERNEL = 2.6.15-mips, SDK=1.0, Build=0290, Date=Thur, 7, Sep, 2007, 
+					WLAN Version=ap81-7.1.2.19, Build=0013, Date=Tue, 29, Aug, 2007,
+					
+					1. Fixed Running BT Endurance test for 6 hours, the DUT crash. We should power off and power on the DUT.
+					2. Fixed When setting wireless security for change different Authentication type for wireless client to connect, sometimes the DUT will crash. We should power off then power on the DUT.
+					3. Fixed the position for "MAC Table" in MAC Filter
+					4. Fixed to display "Model name" and "Model number" as "TEW-632" for the router in UPnP info.
+					5. Fixed the strings for "SSID" in "Wireless->Basic", "Status" and "Wizard" should be the same.
+					6. Moved the "Help" button to the right side on Protocol/IP Filter.
+					7. Fixed If setting "Shared Key" for WEP, or "WPA-EAP", "WPA2-EAP", "WPA2-Auto/EAP", the Authentication type for wireless couldn't be displayed in status page.
+					8. Fixed When setting "Battle.net" in "Special AP", the UDP port "6112" of WAN side PC couldn't be access by LAN side PC.
+					9. Fixed When setting "ICU II" in "Special AP", the UDP port "2019" of WAN side PC couldn't be access by LAN side PC.
+					10. Fixed When select Cipher Type as "Auto" in "WPA-PSK", "WPA2-PSK" and "WPA2-Auto/PSK", the "WPS" function will be disabled.
+					11. Fixed When setting Netmeeting in "Virtual server" or "Special AP", it hard to setting ports for user, and suggest to add the default services menu below the setting pages.
+					12. Fixed After select "No" for "Display Wizard next time?", the Wizard still pop-up when login the router or click "Main" page.
+					13. Fixed After setting security for wireless, then click "Apply" button, the webpage couldn't display.
+					14. Fixed After setting security for wireless as "WPA-PSK/AES", "WPA2-PSK/AES" and "WPA2-Auto/PSK/AES", then link wireless client with WPS, the Authentication Encryption type shows "TKIP" in WPS setting page.
+					15. Fixed When select "Allow" in "Domain/URL Blocking", if setting "yahoo" in Domains List, we can't access all the web page in internet. If select "Deny", we can access all the web page in internet.
+					16. Fixed After select "Donaim/URL Blocking" or "Protocol/IP Filters", then click "Managerment" function, the web page link error.
+					17. Modified 802.11 mode value: Mixed 80211b,802.11g ->11bg mode
+					18. Remove the back link on count down/back pages.
+					19. Add count down 10sec when user setting device.
+					
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+   	          		  back.asp
+   	          		  count_down.asp
+   	          		  domain_filter.asp
+   	          		  filter.asp
+   	          		  lan.asp
+   	          		  protocol_filter.asp
+   	          		  public.js
+   	          		  routing_table.asp
+   	          		  special_ap.asp
+   	          		  static_routing.asp
+   	          		  status.asp
+   	          		  virtual_server.asp
+   	          		  wireless_auth.asp
+   	          		  wireless_basic.asp
+   	          		  wizard6.asp
+   	          		  wlan_wps.asp
+--------------------------------------------------------------------------------   	          		  
+[2007/08/28]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-08-29-0005
+AthSDK Tag      :   AP61-2007-08-28-0275
+Platform Tag    :   AR7100_2007-08-28-0017 
+Wireless Tag    :   AP81-2007-08-29-0013
+Description		:	Update AthSDK	
+						F/W=1.00 ,Build=0005 ,Date=Wed, 29 Aug 2007, 
+						KERNEL = 2.6.15-mips, SDK=1.0, Build=0275, Date=Tue, 28, Aug, 2007, 
+						WLAN Version=ap81-7.1.2.19, Build=0013, Date=Tue, 29, Aug, 2007,
+						1. Fixed There is no WPS icon in VISTA when router is "unconfigured".
+						2. Modified TEW-632BRP.linux.config.
+						3. Fixed after wps and modifty security to wep and change channel, the webpage will crash.
+		
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+   	          		  wireless_basic.asp
+[2007/08/24]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-08-24-0004
+AthSDK Tag      :   AP61-2007-08-24-0269 
+Platform Tag    :   AR7100_2007-08-22-0016 
+Wireless Tag    :   AP81-2007-08-16-0011
+Description		:	Modified webpages	
+						F/W=1.00 ,Build=0004 ,Date=Fri, 24 Aug 2007, 
+						KERNEL = 2.6.15-mips, SDK=1.0, Build=0269, Date=Fri, 24, Aug, 2007, 
+						WLAN Version=ap81-7.1.2.12, Build=0011, Date=Wed, 22, Aug, 2007,
+
+						1.  Fixed SMTP authentication function.						
+						2.  Fixed when WPS with configured modeAnd after finish wireless setting. 
+						3.  Fixed wheb user login the rouetr, the webpage will show encryption character.
+						4.  Modified the hostname to TRENDnet.
+						5.  Removed the antenna transmit power.
+						6.  Fixed after using WPS, SSID has double mac address.
+						7.  Fixed Mac filter fail
+						8.  Fixed Special AP FAIL in TCP /ANY (PASS),ANY /ALL (FAIL)
+						9.	Add count down page.
+					
+		
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+		
+						back.asp 
+						count_down.asp
+						login.asp 
+						restart.asp 
+						wireless_advanced.asp
+						wireless_auth.asp 
+						wireless_basic.asp
+
+[2007/08/22]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-08-01-0003
+AthSDK Tag      :   AP61-2007-08-22-0265 
+Platform Tag    :   AR7100_2007-08-22-0016 
+Wireless Tag    :   AP81-2007-08-16-0011
+Description		:	Modified webpages	
+						F/W=1.00 ,Build=0003 ,Date=Wed, 22 Aug 2007,
+						KERNEL = 2.6.15-mips, SDK=1.0, Build=0265, Date=Wed, 22, Aug, 2007, 
+						WLAN Version=ap81-7.1.2.12, Build=0011, Date=Wed, 22, Aug, 2007
+
+						1.	Fixed Special AP fail - FAIL in TCP /ANY,ANY /ALL.
+						2.	Fixed static routing fail - FAIL in LAN
+						3.	Fixed DDNS fail-FAIL in NO-IP
+						4.	Fixed Mac filter fail- FAIL disable and enable can work only after repower.
+						5.	Fixed connection status is wrong on PPPoE.
+						6.	Fixed In wizard for L2TP/PPTP is static mode, but in fact the result is dynamic mode.
+						7.	Fixed In wizard "BACK" button can't work in "set LAN and DHCP server" page.
+						8.  Fixed Router can't save enable authentication email button
+						9.  Fixed Access / domain filter/URL Blocking .There is no "APPLY" button.
+						10. Fixed WPS icon error.
+						11. Fixed When router in WEP or WPS-PSK with configured mode. 
+						And after finish PIN or PCB count pages and push "retry" button will enter a wrong.
+						12. Fixed show domain erroron wireless setting page. 
+		
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+					4.TEW-632BRP(DIR-615_C1)_ReleaseNote.doc
+						domain_filter.asp 
+						log_setting.asp 
+						public.js
+						status.asp 
+						special_ap.asp
+						wireless_basic.asp 
+						wizard3.asp
+						wizard5.asp 
+						wizard5c.asp 
+						wizard5d.asp
+						wizard5e.asp 
+						wizard5f.asp 
+						wizard6.asp
+						wps_back.asp
+						wps_back_fail.asp
+					
+[2007/08/15]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-08-15-0002
+Description		:	Modified webpages			
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
+						1. Disable DHCP server fail
+						2. PPPoE 
+							a. PPPoE link be disconnected when ping packet larger than MTU, ex:1000
+							b. Static PPPoE fail, router can't keep static IP
+						3. There is no wireless connection time in wireless status
+						4. HELP
+							a. Default IP is wrong in HELP
+							b. extra item for advanced wireless.
+							c. beacon range is not match.
+							d. there is no WPS help.
+							e. Removed NAT item in HELP.
+						5. Wireless security 
+							a. Channel domain should be country area code not digital number.
+						6. DDNS fail
+							a. Extra unit for wireless 802.11 mode.
+							b. Exit button in tome zone of internet wizard can't work.
+						7. WEB page may crash after some settings.
+						8. ACCESS FILTER - Mac filter fail.
+						9. ACCESS FILTER - domain URL fail.
+						10. ACCESS FILTER - Special AP fail.
+						11. Wrong UPNP IGD txt.
+						12. There is no pop message after user? Modify setting via "user" account.
+						13. There is pop message for virtual server and remote management port conflict
+						14. PPTP/L2TP
+							a. static DNS for dynamic PPTP/L2TP can't work (maybe it should grayed -out)
+						15. Internet wizard
+							a. removed auto detect.
+							b. After internet wizard by selecting? l2t ,wan mode is l2tp fixed mode, but there is no page for static ip setting during l2tp wizard.
+							c. There is no default value for "display wizard net time"
+							d. There is no password mask.
+						16. Routing
+							a. static routing fail.
+							b. RIPV1/V2 FAIL.
+							c. Removed NAT item as HELP.
+						17. Send log mail
+							a. because there is no authentication item for disable or enable, user can't use it. 
+						18. STATUS/LOG
+							a. There is no log page count number
+						19. WPS
+							a. after finish WPS ,SSID should not has dlink style.
+							b. wireless security still shows disable in WEB page? after finishing WPS/PBC and there is no security key information as PIN.
+							c. an error page shown after finishing WPS count page with? STA link, user can't push retry button
+						20. AP crash during throughput test or throughput? Too low issue 
+						21. Web may crash after several settings.
+
+[2007/07/09]
+Name			:	Grace.Yang
+Type			: 	UI
+Version			:	1.0
+Tag				:	TEW-632BRP-2007-08-01-0001
+Description		:	First release			
+Deatail			:	1.nvram.default
+					2.version.c
+					3.ReleaseNote.txt
