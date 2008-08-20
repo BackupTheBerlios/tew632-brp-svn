@@ -2,9 +2,6 @@
 #define _IPT_CONNBYTES_H
 
 enum ipt_connbytes_what {
-	IPT_CONNBYTES_WHAT_PKTS,
-	IPT_CONNBYTES_WHAT_BYTES,
-	IPT_CONNBYTES_WHAT_AVGPKT,
 	IPT_CONNBYTES_PKTS,
 	IPT_CONNBYTES_BYTES,
 	IPT_CONNBYTES_AVGPKT,
@@ -19,10 +16,8 @@ enum ipt_connbytes_direction {
 struct ipt_connbytes_info
 {
 	struct {
-		//aligned_u64 from;	/* count to be matched */
-		//aligned_u64 to;	/* count to be matched */
-		unsigned long long from;	/* count to be matched */
-		unsigned long long to;		/* count to be matched */
+		aligned_u64 from;	/* count to be matched */
+		aligned_u64 to;		/* count to be matched */
 	} count;
 	u_int8_t what;		/* ipt_connbytes_what */
 	u_int8_t direction;	/* ipt_connbytes_direction */
