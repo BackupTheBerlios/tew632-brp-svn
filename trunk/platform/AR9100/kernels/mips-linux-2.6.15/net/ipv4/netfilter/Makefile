@@ -12,17 +12,6 @@ ip_nat_pptp-objs	:= ip_nat_helper_pptp.o ip_nat_proto_gre.o
 
 # connection tracking
 obj-$(CONFIG_IP_NF_CONNTRACK) += ip_conntrack.o
- 
-# SIP support
-obj-$(CONFIG_IP_NF_SIP) += ip_conntrack_sip.o
-obj-$(CONFIG_IP_NF_NAT_SIP) += ip_nat_sip.o
-
- 
-# H.323 support
-obj-$(CONFIG_IP_NF_H323) += ip_conntrack_h323.o
-ip_conntrack_h323-objs := ip_conntrack_h323_core.o ip_conntrack_h323_h225.o ip_conntrack_h323_h245.o asn1_per.o
-obj-$(CONFIG_IP_NF_NAT_H323) += ip_nat_h323.o
-
 obj-$(CONFIG_IP_NF_NAT) += ip_nat.o
 
 # conntrack netlink interface
@@ -33,15 +22,6 @@ obj-$(CONFIG_IP_NF_CONNTRACK_NETLINK) += ip_conntrack_netlink.o
 obj-$(CONFIG_IP_NF_CT_PROTO_SCTP) += ip_conntrack_proto_sctp.o
 
 # connection tracking helpers
-obj-$(CONFIG_IP_NF_TALK) += ip_conntrack_talk.o
-
-# rtsp protocol support
-obj-$(CONFIG_IP_NF_RTSP) += ip_conntrack_rtsp.o
-obj-$(CONFIG_IP_NF_NAT_RTSP) += ip_nat_rtsp.o
-
-obj-$(CONFIG_IP_NF_RSH) += ip_conntrack_rsh.o
-obj-$(CONFIG_IP_NF_QUAKE3) += ip_conntrack_quake3.o
-obj-$(CONFIG_IP_NF_MMS) += ip_conntrack_mms.o
 obj-$(CONFIG_IP_NF_PPTP) += ip_conntrack_pptp.o
 obj-$(CONFIG_IP_NF_AMANDA) += ip_conntrack_amanda.o
 obj-$(CONFIG_IP_NF_TFTP) += ip_conntrack_tftp.o
@@ -50,14 +30,11 @@ obj-$(CONFIG_IP_NF_IRC) += ip_conntrack_irc.o
 obj-$(CONFIG_IP_NF_NETBIOS_NS) += ip_conntrack_netbios_ns.o
 
 # NAT helpers 
-obj-$(CONFIG_IP_NF_NAT_TALK) += ip_nat_talk.o
-obj-$(CONFIG_IP_NF_NAT_MMS) += ip_nat_mms.o
 obj-$(CONFIG_IP_NF_NAT_PPTP) += ip_nat_pptp.o
 obj-$(CONFIG_IP_NF_NAT_AMANDA) += ip_nat_amanda.o
 obj-$(CONFIG_IP_NF_NAT_TFTP) += ip_nat_tftp.o
 obj-$(CONFIG_IP_NF_NAT_FTP) += ip_nat_ftp.o
 obj-$(CONFIG_IP_NF_NAT_IRC) += ip_nat_irc.o
-obj-$(CONFIG_IP_NF_NAT_QUAKE3) += ip_nat_quake3.o
 
 # generic IP tables 
 obj-$(CONFIG_IP_NF_IPTABLES) += ip_tables.o
@@ -69,29 +46,18 @@ obj-$(CONFIG_IP_NF_NAT) += iptable_nat.o
 obj-$(CONFIG_IP_NF_RAW) += iptable_raw.o
 
 # matches
-obj-$(CONFIG_IP_NF_MATCH_RPC) += ip_conntrack_rpc_tcp.o ip_conntrack_rpc_udp.o ipt_rpc.o
-export-objs += ip_conntrack_rpc_tcp.o ip_conntrack_rpc_udp.o
-
 obj-$(CONFIG_IP_NF_MATCH_HELPER) += ipt_helper.o
 obj-$(CONFIG_IP_NF_MATCH_LIMIT) += ipt_limit.o
-obj-$(CONFIG_IP_NF_MATCH_QUOTA) += ipt_quota.o
 obj-$(CONFIG_IP_NF_MATCH_HASHLIMIT) += ipt_hashlimit.o
 obj-$(CONFIG_IP_NF_MATCH_SCTP) += ipt_sctp.o
 obj-$(CONFIG_IP_NF_MATCH_DCCP) += ipt_dccp.o
 obj-$(CONFIG_IP_NF_MATCH_MARK) += ipt_mark.o
-obj-$(CONFIG_IP_NF_MATCH_SET) += ipt_set.o
 obj-$(CONFIG_IP_NF_MATCH_MAC) += ipt_mac.o
 obj-$(CONFIG_IP_NF_MATCH_IPRANGE) += ipt_iprange.o
 obj-$(CONFIG_IP_NF_MATCH_PKTTYPE) += ipt_pkttype.o
 obj-$(CONFIG_IP_NF_MATCH_MULTIPORT) += ipt_multiport.o
-
-obj-$(CONFIG_IP_NF_MATCH_MPORT) += ipt_mport.o
-
 obj-$(CONFIG_IP_NF_MATCH_OWNER) += ipt_owner.o
-obj-$(CONFIG_IP_NF_MATCH_TOS) += ipt_TOS.o
-
-obj-$(CONFIG_IP_NF_MATCH_TIME) += ipt_time.o
-
+obj-$(CONFIG_IP_NF_MATCH_TOS) += ipt_tos.o
 obj-$(CONFIG_IP_NF_MATCH_RECENT) += ipt_recent.o
 obj-$(CONFIG_IP_NF_MATCH_ECN) += ipt_ecn.o
 obj-$(CONFIG_IP_NF_MATCH_DSCP) += ipt_dscp.o
@@ -108,10 +74,8 @@ obj-$(CONFIG_IP_NF_MATCH_ADDRTYPE) += ipt_addrtype.o
 obj-$(CONFIG_IP_NF_MATCH_PHYSDEV) += ipt_physdev.o
 obj-$(CONFIG_IP_NF_MATCH_COMMENT) += ipt_comment.o
 obj-$(CONFIG_IP_NF_MATCH_STRING) += ipt_string.o
-obj-$(CONFIG_IP_NF_MATCH_URLFILTER) += ipt_urlfilter.o
 
 # targets
-obj-$(CONFIG_IP_NF_TARGET_PORTTRIGGER) += ipt_PORTTRIGGER.o
 obj-$(CONFIG_IP_NF_TARGET_REJECT) += ipt_REJECT.o
 obj-$(CONFIG_IP_NF_TARGET_TOS) += ipt_TOS.o
 obj-$(CONFIG_IP_NF_TARGET_ECN) += ipt_ECN.o
@@ -128,18 +92,6 @@ obj-$(CONFIG_IP_NF_TARGET_CONNMARK) += ipt_CONNMARK.o
 obj-$(CONFIG_IP_NF_TARGET_ULOG) += ipt_ULOG.o
 obj-$(CONFIG_IP_NF_TARGET_TCPMSS) += ipt_TCPMSS.o
 obj-$(CONFIG_IP_NF_TARGET_NOTRACK) += ipt_NOTRACK.o
-obj-$(CONFIG_IP_NF_TARGET_SET) += ipt_SET.o
-obj-$(CONFIG_IP_NF_TARGET_NATTYPE) += ipt_NATTYPE.o
-
-# sets
-obj-$(CONFIG_IP_NF_SET) += ip_set.o
-obj-$(CONFIG_IP_NF_SET_IPMAP) += ip_set_ipmap.o
-obj-$(CONFIG_IP_NF_SET_PORTMAP) += ip_set_portmap.o
-obj-$(CONFIG_IP_NF_SET_MACIPMAP) += ip_set_macipmap.o
-obj-$(CONFIG_IP_NF_SET_IPHASH) += ip_set_iphash.o
-obj-$(CONFIG_IP_NF_SET_NETHASH) += ip_set_nethash.o
-obj-$(CONFIG_IP_NF_SET_IPPORTHASH) += ip_set_ipporthash.o
-obj-$(CONFIG_IP_NF_SET_IPTREE) += ip_set_iptree.o
 obj-$(CONFIG_IP_NF_TARGET_CLUSTERIP) += ipt_CLUSTERIP.o
 obj-$(CONFIG_IP_NF_TARGET_TTL) += ipt_TTL.o
 obj-$(CONFIG_IP_NF_TARGET_NFQUEUE) += ipt_NFQUEUE.o
