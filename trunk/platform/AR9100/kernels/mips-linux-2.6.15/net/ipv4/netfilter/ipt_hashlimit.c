@@ -3,7 +3,7 @@
  *
  * (C) 2003-2004 by Harald Welte <laforge@netfilter.org>
  *
- * $Id: ipt_hashlimit.c,v 1.1.1.1 2007/06/26 07:59:23 albert Exp $
+ * $Id: ipt_hashlimit.c 3244 2004-10-20 16:24:29Z laforge@netfilter.org $
  *
  * Development of this code was funded by Astaro AG, http://www.astaro.com/
  *

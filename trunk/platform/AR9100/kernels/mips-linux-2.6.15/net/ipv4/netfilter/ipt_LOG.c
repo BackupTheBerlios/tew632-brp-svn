@@ -33,9 +33,6 @@ MODULE_DESCRIPTION("iptables syslog logging module");
 #define DEBUGP(format, args...)
 #endif
 
-#define PRINTR(format, args...) do { if (net_ratelimit()) printk(format , ## args); } while (0)
-
-
 /* Use lock to serialize, so printks don't overlap */
 static DEFINE_SPINLOCK(log_lock);
 
@@ -54,34 +51,32 @@ static void dump_packet(const struct nf_loginfo *info,
 
 	ih = skb_header_pointer(skb, iphoff, sizeof(_iph), &_iph);
 	if (ih == NULL) {
-		PRINTR("TRUNCATED");
+		printk("TRUNCATED");
 		return;
 	}
 
 	/* Important fields:
 	 * TOS, len, DF/MF, fragment offset, TTL, src, dst, options. */
 	/* Max length: 40 "SRC=255.255.255.255 DST=255.255.255.255 " */
-	PRINTR("SRC=%u.%u.%u.%u DST=%u.%u.%u.%u ",
+	printk("SRC=%u.%u.%u.%u DST=%u.%u.%u.%u ",
 	       NIPQUAD(ih->saddr), NIPQUAD(ih->daddr));
 
-#if 0 //Chun: don't log useless message
 	/* Max length: 46 "LEN=65535 TOS=0xFF PREC=0xFF TTL=255 ID=65535 " */
-	PRINTR( "LEN=%u TOS=0x%02X PREC=0x%02X TTL=%u ID=%u ",
+	printk("LEN=%u TOS=0x%02X PREC=0x%02X TTL=%u ID=%u ",
 	       ntohs(ih->tot_len), ih->tos & IPTOS_TOS_MASK,
 	       ih->tos & IPTOS_PREC_MASK, ih->ttl, ntohs(ih->id));
 
 	/* Max length: 6 "CE DF MF " */
 	if (ntohs(ih->frag_off) & IP_CE)
-		PRINTR("CE ");
+		printk("CE ");
 	if (ntohs(ih->frag_off) & IP_DF)
-		PRINTR("DF ");
+		printk("DF ");
 	if (ntohs(ih->frag_off) & IP_MF)
-		PRINTR("MF ");
-#endif
+		printk("MF ");
 
 	/* Max length: 11 "FRAG:65535 " */
 	if (ntohs(ih->frag_off) & IP_OFFSET)
-		PRINTR("FRAG:%u ", ntohs(ih->frag_off) & IP_OFFSET);
+		printk("FRAG:%u ", ntohs(ih->frag_off) & IP_OFFSET);
 
 	if ((logflags & IPT_LOG_IPOPT)
 	    && ih->ihl * 4 > sizeof(struct iphdr)) {
@@ -92,15 +87,15 @@ static void dump_packet(const struct nf_loginfo *info,
 		op = skb_header_pointer(skb, iphoff+sizeof(_iph),
 					optsize, _opt);
 		if (op == NULL) {
-			PRINTR("TRUNCATED");
+			printk("TRUNCATED");
 			return;
 		}
 
 		/* Max length: 127 "OPT (" 15*4*2chars ") " */
-		PRINTR(KERN_NOTICE "OPT (");
+		printk("OPT (");
 		for (i = 0; i < optsize; i++)
-			PRINTR("%02X", op[i]);
-		PRINTR(") ");
+			printk("%02X", op[i]);
+		printk(") ");
 	}
 
 	switch (ih->protocol) {
@@ -108,7 +103,7 @@ static void dump_packet(const struct nf_loginfo *info,
 		struct tcphdr _tcph, *th;
 
 		/* Max length: 10 "PROTO=TCP " */
-		PRINTR("PROTO=TCP ");
+		printk("PROTO=TCP ");
 
 		if (ntohs(ih->frag_off) & IP_OFFSET)
 			break;
@@ -117,43 +112,42 @@ static void dump_packet(const struct nf_loginfo *info,
 		th = skb_header_pointer(skb, iphoff + ih->ihl * 4,
 					sizeof(_tcph), &_tcph);
 		if (th == NULL) {
-			PRINTR("INCOMPLETE [%u bytes] ",
+			printk("INCOMPLETE [%u bytes] ",
 			       skb->len - iphoff - ih->ihl*4);
 			break;
 		}
 
 		/* Max length: 20 "SPT=65535 DPT=65535 " */
-		PRINTR("SPT=%u DPT=%u ",
+		printk("SPT=%u DPT=%u ",
 		       ntohs(th->source), ntohs(th->dest));
-#if 0	//Chun: don't log useless message	       
 		/* Max length: 30 "SEQ=4294967295 ACK=4294967295 " */
 		if (logflags & IPT_LOG_TCPSEQ)
-			PRINTR("SEQ=%u ACK=%u ",
+			printk("SEQ=%u ACK=%u ",
 			       ntohl(th->seq), ntohl(th->ack_seq));
 		/* Max length: 13 "WINDOW=65535 " */
-		PRINTR("WINDOW=%u ", ntohs(th->window));
+		printk("WINDOW=%u ", ntohs(th->window));
 		/* Max length: 9 "RES=0x3F " */
-		PRINTR("RES=0x%02x ", (u8)(ntohl(tcp_flag_word(th) & TCP_RESERVED_BITS) >> 22));
+		printk("RES=0x%02x ", (u8)(ntohl(tcp_flag_word(th) & TCP_RESERVED_BITS) >> 22));
 		/* Max length: 32 "CWR ECE URG ACK PSH RST SYN FIN " */
 		if (th->cwr)
-			PRINTR("CWR ");
+			printk("CWR ");
 		if (th->ece)
-			PRINTR("ECE ");
+			printk("ECE ");
 		if (th->urg)
-			PRINTR("URG ");
+			printk("URG ");
 		if (th->ack)
-			PRINTR("ACK ");
+			printk("ACK ");
 		if (th->psh)
-			PRINTR("PSH ");
+			printk("PSH ");
 		if (th->rst)
-			PRINTR("RST ");
+			printk("RST ");
 		if (th->syn)
-			PRINTR("SYN ");
+			printk("SYN ");
 		if (th->fin)
-			PRINTR("FIN ");
+			printk("FIN ");
 		/* Max length: 11 "URGP=65535 " */
-		PRINTR("URGP=%u ", ntohs(th->urg_ptr));
-#endif
+		printk("URGP=%u ", ntohs(th->urg_ptr));
+
 		if ((logflags & IPT_LOG_TCPOPT)
 		    && th->doff * 4 > sizeof(struct tcphdr)) {
 			unsigned char _opt[4 * 15 - sizeof(struct tcphdr)];
@@ -165,15 +159,15 @@ static void dump_packet(const struct nf_loginfo *info,
 						iphoff+ih->ihl*4+sizeof(_tcph),
 						optsize, _opt);
 			if (op == NULL) {
-				PRINTR("TRUNCATED");
+				printk("TRUNCATED");
 				return;
 			}
 
 			/* Max length: 127 "OPT (" 15*4*2chars ") " */
-			PRINTR(KERN_NOTICE "OPT (");
+			printk("OPT (");
 			for (i = 0; i < optsize; i++)
-				PRINTR("%02X", op[i]);
-			PRINTR(") ");
+				printk("%02X", op[i]);
+			printk(") ");
 		}
 		break;
 	}
@@ -181,7 +175,7 @@ static void dump_packet(const struct nf_loginfo *info,
 		struct udphdr _udph, *uh;
 
 		/* Max length: 10 "PROTO=UDP " */
-		PRINTR("PROTO=UDP ");
+		printk("PROTO=UDP ");
 
 		if (ntohs(ih->frag_off) & IP_OFFSET)
 			break;
@@ -190,13 +184,13 @@ static void dump_packet(const struct nf_loginfo *info,
 		uh = skb_header_pointer(skb, iphoff+ih->ihl*4,
 					sizeof(_udph), &_udph);
 		if (uh == NULL) {
-			PRINTR("INCOMPLETE [%u bytes] ",
+			printk("INCOMPLETE [%u bytes] ",
 			       skb->len - iphoff - ih->ihl*4);
 			break;
 		}
 
 		/* Max length: 20 "SPT=65535 DPT=65535 " */
-		PRINTR("SPT=%u DPT=%u LEN=%u ",
+		printk("SPT=%u DPT=%u LEN=%u ",
 		       ntohs(uh->source), ntohs(uh->dest),
 		       ntohs(uh->len));
 		break;
@@ -222,7 +216,7 @@ static void dump_packet(const struct nf_loginfo *info,
 			    [ICMP_ADDRESSREPLY] = 12 };
 
 		/* Max length: 11 "PROTO=ICMP " */
-		PRINTR("PROTO=ICMP ");
+		printk("PROTO=ICMP ");
 
 		if (ntohs(ih->frag_off) & IP_OFFSET)
 			break;
@@ -231,40 +225,40 @@ static void dump_packet(const struct nf_loginfo *info,
 		ich = skb_header_pointer(skb, iphoff + ih->ihl * 4,
 					 sizeof(_icmph), &_icmph);
 		if (ich == NULL) {
-			PRINTR("INCOMPLETE [%u bytes] ",
+			printk("INCOMPLETE [%u bytes] ",
 			       skb->len - iphoff - ih->ihl*4);
 			break;
 		}
 
 		/* Max length: 18 "TYPE=255 CODE=255 " */
-		PRINTR("TYPE=%u CODE=%u ", ich->type, ich->code);
+		printk("TYPE=%u CODE=%u ", ich->type, ich->code);
 
 		/* Max length: 25 "INCOMPLETE [65535 bytes] " */
 		if (ich->type <= NR_ICMP_TYPES
 		    && required_len[ich->type]
 		    && skb->len-iphoff-ih->ihl*4 < required_len[ich->type]) {
-			PRINTR("INCOMPLETE [%u bytes] ",
+			printk("INCOMPLETE [%u bytes] ",
 			       skb->len - iphoff - ih->ihl*4);
 			break;
 		}
-#if 0 //Chun: don't log useless message
+
 		switch (ich->type) {
 		case ICMP_ECHOREPLY:
 		case ICMP_ECHO:
 			/* Max length: 19 "ID=65535 SEQ=65535 " */
-			PRINTR("ID=%u SEQ=%u ",
+			printk("ID=%u SEQ=%u ",
 			       ntohs(ich->un.echo.id),
 			       ntohs(ich->un.echo.sequence));
 			break;
 
 		case ICMP_PARAMETERPROB:
 			/* Max length: 14 "PARAMETER=255 " */
-			PRINTR("PARAMETER=%u ",
+			printk("PARAMETER=%u ",
 			       ntohl(ich->un.gateway) >> 24);
 			break;
 		case ICMP_REDIRECT:
 			/* Max length: 24 "GATEWAY=255.255.255.255 " */
-			PRINTR("GATEWAY=%u.%u.%u.%u ",
+			printk("GATEWAY=%u.%u.%u.%u ",
 			       NIPQUAD(ich->un.gateway));
 			/* Fall through */
 		case ICMP_DEST_UNREACH:
@@ -272,18 +266,17 @@ static void dump_packet(const struct nf_loginfo *info,
 		case ICMP_TIME_EXCEEDED:
 			/* Max length: 3+maxlen */
 			if (!iphoff) { /* Only recurse once. */
-				PRINTR("[");
+				printk("[");
 				dump_packet(info, skb,
 					    iphoff + ih->ihl*4+sizeof(_icmph));
-				PRINTR("] ");
+				printk("] ");
 			}
 
 			/* Max length: 10 "MTU=65535 " */
 			if (ich->type == ICMP_DEST_UNREACH
 			    && ich->code == ICMP_FRAG_NEEDED)
-				PRINTR("MTU=%u ", ntohs(ich->un.frag.mtu));
+				printk("MTU=%u ", ntohs(ich->un.frag.mtu));
 		}
-#endif
 		break;
 	}
 	/* Max Length */
@@ -294,26 +287,26 @@ static void dump_packet(const struct nf_loginfo *info,
 			break;
 		
 		/* Max length: 9 "PROTO=AH " */
-		PRINTR("PROTO=AH ");
+		printk("PROTO=AH ");
 
 		/* Max length: 25 "INCOMPLETE [65535 bytes] " */
 		ah = skb_header_pointer(skb, iphoff+ih->ihl*4,
 					sizeof(_ahdr), &_ahdr);
 		if (ah == NULL) {
-			PRINTR("INCOMPLETE [%u bytes] ",
+			printk("INCOMPLETE [%u bytes] ",
 			       skb->len - iphoff - ih->ihl*4);
 			break;
 		}
 
 		/* Length: 15 "SPI=0xF1234567 " */
-		PRINTR("SPI=0x%x ", ntohl(ah->spi));
+		printk("SPI=0x%x ", ntohl(ah->spi));
 		break;
 	}
 	case IPPROTO_ESP: {
 		struct ip_esp_hdr _esph, *eh;
 
 		/* Max length: 10 "PROTO=ESP " */
-		PRINTR("PROTO=ESP ");
+		printk("PROTO=ESP ");
 
 		if (ntohs(ih->frag_off) & IP_OFFSET)
 			break;
@@ -322,25 +315,25 @@ static void dump_packet(const struct nf_loginfo *info,
 		eh = skb_header_pointer(skb, iphoff+ih->ihl*4,
 					sizeof(_esph), &_esph);
 		if (eh == NULL) {
-			PRINTR("INCOMPLETE [%u bytes] ",
+			printk("INCOMPLETE [%u bytes] ",
 			       skb->len - iphoff - ih->ihl*4);
 			break;
 		}
 
 		/* Length: 15 "SPI=0xF1234567 " */
-		PRINTR("SPI=0x%x ", ntohl(eh->spi));
+		printk("SPI=0x%x ", ntohl(eh->spi));
 		break;
 	}
 	/* Max length: 10 "PROTO 255 " */
 	default:
-		PRINTR("PROTO=%u ", ih->protocol);
+		printk("PROTO=%u ", ih->protocol);
 	}
 
 	/* Max length: 15 "UID=4294967295 " */
  	if ((logflags & IPT_LOG_UID) && !iphoff && skb->sk) {
 		read_lock_bh(&skb->sk->sk_callback_lock);
 		if (skb->sk->sk_socket && skb->sk->sk_socket->file)
- 			PRINTR("UID=%u ", skb->sk->sk_socket->file->f_uid);
+ 			printk("UID=%u ", skb->sk->sk_socket->file->f_uid);
 		read_unlock_bh(&skb->sk->sk_callback_lock);
 	}
 
@@ -381,41 +374,39 @@ ipt_log_packet(unsigned int pf,
 		loginfo = &default_loginfo;
 
 	spin_lock_bh(&log_lock);
-	//PRINTR("<%d>%sIN=%s OUT=%s ", loginfo->u.log.level,
-	//       prefix,
-	//       in ? in->name : "",
-	//       out ? out->name : "");
-	PRINTR(KERN_NOTICE "%s ", prefix);
-		
+	printk("<%d>%sIN=%s OUT=%s ", loginfo->u.log.level,
+	       prefix,
+	       in ? in->name : "",
+	       out ? out->name : "");
 #ifdef CONFIG_BRIDGE_NETFILTER
 	if (skb->nf_bridge) {
 		struct net_device *physindev = skb->nf_bridge->physindev;
 		struct net_device *physoutdev = skb->nf_bridge->physoutdev;
 
 		if (physindev && in != physindev)
-			PRINTR("PHYSIN=%s ", physindev->name);
+			printk("PHYSIN=%s ", physindev->name);
 		if (physoutdev && out != physoutdev)
-			PRINTR("PHYSOUT=%s ", physoutdev->name);
+			printk("PHYSOUT=%s ", physoutdev->name);
 	}
 #endif
-#if 0
+
 	if (in && !out) {
 		/* MAC logging for input chain only. */
-		PRINTR("MAC=");
+		printk("MAC=");
 		if (skb->dev && skb->dev->hard_header_len
 		    && skb->mac.raw != (void*)skb->nh.iph) {
 			int i;
 			unsigned char *p = skb->mac.raw;
 			for (i = 0; i < skb->dev->hard_header_len; i++,p++)
-				PRINTR(KERN_NOTICE "%02x%c", *p,
+				printk("%02x%c", *p,
 				       i==skb->dev->hard_header_len - 1
 				       ? ' ':':');
 		} else
-			PRINTR(KERN_NOTICE " ");
+			printk(" ");
 	}
-#endif
+
 	dump_packet(loginfo, skb, 0);
-	PRINTR("\n");
+	printk("\n");
 	spin_unlock_bh(&log_lock);
 }
 
@@ -485,7 +476,7 @@ static int __init init(void)
 	if (ipt_register_target(&ipt_log_reg))
 		return -EINVAL;
 	if (nf_log_register(PF_INET, &ipt_log_logger) < 0) {
-		PRINTR(KERN_WARNING "ipt_LOG: not logging via system console "
+		printk(KERN_WARNING "ipt_LOG: not logging via system console "
 		       "since somebody else already registered for PF_INET\n");
 		/* we cannot make module load fail here, since otherwise
 		 * iptables userspace would abort */
