@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.15--LSDK-7.1.2.27
- * Wed Aug 20 12:15:01 2008
+ * Sat Aug 23 21:03:03 2008
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_MIPS 1
