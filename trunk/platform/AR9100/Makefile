@@ -195,6 +195,8 @@ endif
 #	cp $(KERNELTARGET).gz $(IMAGEPATH);
 	cd $(KERNELPATH)/arch/$(KERNELARCH)/boot && \
 	/opt/ap71_tools/lzma e $(KERNELTARGET) vmlinux.lzma -d23
+	cp $(KERNELPATH)/arch/$(KERNELARCH)/boot/vmlinux.lzma $(TFTPPATH)
+	cp $(KERNELPATH)/arch/$(KERNELARCH)/boot/vmlinux.lzma $(IMAGEPATH)
 endif
 
 redboot_build:
