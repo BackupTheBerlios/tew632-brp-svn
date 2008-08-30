@@ -2,4 +2,8 @@
 So far I've got lost files cleaned up, which was due to case insensitive archive from the vendor.
 I've also fixed other errata found in the source. I'll note other things here as they occur.
 
+Missing pieces (non-GPL):
+  
+   + nvram utility, only built library is present. Can be recreated if ever necessary.
+
 -db90h
