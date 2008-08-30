@@ -187,12 +187,12 @@ ifneq ($(BOARD_TYPE), ap83)
 	cd $(KERNELPATH) && $(MAKEARCH) $(BOARD_TYPE)_defconfig
 endif	
 	cd $(KERNELPATH) && $(MAKEARCH) $(KERNELTARGET)
-	cd $(KERNELPATH)/arch/$(KERNELARCH)/boot && \
-	cp $(KERNELTARGET) $(TFTPPATH) && \
-	cp $(KERNELTARGET) $(IMAGEPATH) && \
-	gzip -f $(KERNELTARGET) && \
-	cp $(KERNELTARGET).gz $(TFTPPATH) && \
-	cp $(KERNELTARGET).gz $(IMAGEPATH);
+#	cd $(KERNELPATH)/arch/$(KERNELARCH)/boot && \
+#	cp $(KERNELTARGET) $(TFTPPATH) && \
+#	cp $(KERNELTARGET) $(IMAGEPATH) && \
+#	gzip -f $(KERNELTARGET) && \
+#	cp $(KERNELTARGET).gz $(TFTPPATH) && \
+#	cp $(KERNELTARGET).gz $(IMAGEPATH);
 	cd $(KERNELPATH)/arch/$(KERNELARCH)/boot && \
 	/opt/ap71_tools/lzma e $(KERNELTARGET) vmlinux.lzma -d23
 endif
