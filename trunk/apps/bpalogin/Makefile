@@ -20,7 +20,7 @@ SED=/bin/sed
 CFLAGS+= -I../nvram
 LIBS=-lnsl 
 LDFLAGS=
-EXTRA_OBJS=../nvram/nvram.o
+EXTRA_OBJS=../nvram/libnvram.so
 OBJS = bpalogin.o protocol.o transaction.o gen_md5.o unixmain.o
 
 bpalogin: $(OBJS)
