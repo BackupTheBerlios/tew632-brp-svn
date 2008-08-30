@@ -60,4 +60,4 @@ extensions/libipt_MARK.d extensions/libipt_MARK_sh.o: extensions/libipt_MARK.c \
   /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/config.h \
   /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/autoconf.h \
   /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/netfilter.h \
-  extensions/../include/linux/netfilter_ipv4/ipt_MARK.h
+  /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/../include/linux/netfilter_ipv4/ipt_MARK.h

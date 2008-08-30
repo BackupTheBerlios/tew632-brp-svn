@@ -13,7 +13,6 @@ extensions/libipt_ttl.d extensions/libipt_ttl_sh.o: extensions/libipt_ttl.c \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/bits/wchar.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/include/stdarg.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/bits/stdio_lim.h \
-  /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/string.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/stdlib.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/sys/types.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/time.h \
@@ -25,6 +24,7 @@ extensions/libipt_ttl.d extensions/libipt_ttl_sh.o: extensions/libipt_ttl.c \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/bits/time.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/sys/sysmacros.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/alloca.h \
+  /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/string.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/getopt.h \
   /opt/ap71_tools/mips32k/bin/../lib/gcc/mips-linux-uclibc/3.4.4/../../../../mips-linux-uclibc/sys-include/bits/getopt.h \
   include/iptables.h include/iptables_common.h include/libiptc/libiptc.h \
@@ -60,4 +60,4 @@ extensions/libipt_ttl.d extensions/libipt_ttl_sh.o: extensions/libipt_ttl.c \
   /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/config.h \
   /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/autoconf.h \
   /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/netfilter.h \
-  /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/netfilter_ipv4/ipt_TTL.h
+  /home/AthSDK/platform/AR9100/kernels/mips-linux-2.6.15/include/linux/netfilter_ipv4/ipt_ttl.h
