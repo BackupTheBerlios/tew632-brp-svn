@@ -1,4 +1,4 @@
 #!/bin/sh
 cd rootfs
-sudo tar -xzvf dev.tar.gz
+sudo tar -xzvf ../dev.tar.gz
 cd ..
