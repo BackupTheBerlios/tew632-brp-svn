@@ -11,9 +11,8 @@ mount -o remount +w /
 #
 
 #mount -t ramfs -n none /tmp
-mount -t tmpfs tmpfs /tmp -o size=512k
+mount -t tmpfs tmpfs /tmp -o size=2048k
 export PATH=$PATH:/etc/ath
-
 
 ##
 ## Put the names of the interfaces in the environmental variables
@@ -33,14 +32,5 @@ export PATH=$PATH:/etc/ath
 #    /etc/ath/apup
 #fi
 
-#
-# Untar the debug tools into /tmp/tools
-#
-
-#mkdir /tmp/tools
-#cd /tmp/tools
-#tar -xzvf /sbin/debug.tgz
-#export PATH=$PATH:/tmp/tools
-
-#/usr/sbin/telnetd
+/usr/sbin/telnetd
 rc init &
