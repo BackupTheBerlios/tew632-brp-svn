@@ -1,0 +1,83 @@
+###################################################################################
+##  apcfg
+##
+##  Configuration file for Atheros AP.
+##  All settings that affect the operation of the AP are included in this file.  For
+##  those settings not define here, defaults are used.  This file should be used in
+##  lieu of manual configuration.
+##
+###################################################################################
+##
+## Network Address Selection
+## Selects between DHCP or a static fixed address
+##
+## AP_IPADDR  = IP address of the bridge
+## WAN_IPADDR = Fixed IP address of the WAN, if it's not bridged
+## WAN_MODE   = bridged for attached to bridged, Get address if dhcp, fixed address
+##              if static
+##
+###################################################################################
+
+export AP_IPADDR=192.168.1.2
+export AP_NETMASK=255.255.255.0
+export WAN_MODE=bridged
+export WAN_IPADDR=192.168.2.1
+
+#
+# Indicate if you want the WLAN to be activated on boot up.
+#
+
+export WLAN_ON_BOOT=n
+
+# AP_CONTROL_CH could be
+#                a number or
+#                11na (which means auto-scan in 11na mode) or
+#                11ng (which means auto-scan in 11ng mode)
+
+export AP_CONTROL_CH=6
+#export AP_CONTROL_CH=11ng
+#export AP_CONTROL_CH=11na
+
+# AP_EXTN_CH_OFFSET may not be negative for channels 1 to 4.
+export AP_EXTN_CH_OFFSET=-1
+
+##
+## Channel Configuration Section
+##
+
+export TXQUEUELEN=1000
+export SHORTGI=1
+
+#
+# Aggregation.  First parameter enables/disables,
+# second parameter sets the size limit
+#
+
+export AMPDU=1
+export AMPDULIMIT=50000
+
+export CWMMODE=1
+
+export RATECTL=auto
+export MANRATE=0x8c8c8c8c
+export MANRETRIES=0x04040404
+
+export RX_CHAINMASK=5
+export TX_CHAINMASK=5
+
+##
+## AP Identification Section
+##
+
+export AP_SSID=Atheros_XSpan
+
+##
+## If you are using the old scripts, you must specify the WDS_MODE
+##
+
+export WDS_MODE=none
+
+# Set to yes for an OB42/PB42 board
+export OB42=yes
+export ATH_use_eeprom=1
+
